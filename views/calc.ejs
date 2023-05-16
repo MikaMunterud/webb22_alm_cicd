@@ -1,0 +1,38 @@
+<%- include('header.ejs') -%>
+
+<h1>Calculator</h1>
+<h2>Result: <%= result %></h2>
+
+<form action="/calc/add" method="POST" onsubmit="submitForm(event)">
+  <input type="number" name="value" required />
+  <button type="submit">Add</button>
+</form>
+
+<form action="/calc/subtract" method="POST" onsubmit="submitForm(event)">
+  <input type="number" name="value" required />
+  <button type="submit">Subtract</button>
+</form>
+
+<form action="/calc/multiply" method="POST" onsubmit="submitForm(event)">
+  <input type="number" name="value" required />
+  <button type="submit">Multiply</button>
+</form>
+
+<form action="/calc/divide" method="POST" onsubmit="submitForm(event)">
+  <input type="number" name="value" required />
+  <button type="submit">Divide</button>
+</form>
+
+<form action="/calc/clear" method="POST" onsubmit="submitForm(event)">
+  <button type="submit">Clear</button>
+</form>
+
+<form action="/calc/clearAll" method="POST" onsubmit="submitForm(event)">
+  <button type="submit">Clear All</button>
+</form>
+
+<form action="/calc/undo" method="POST" onsubmit="submitForm(event)">
+  <button type="submit">Undo</button>
+</form>
+
+<%- include('footer.ejs') -%>
