@@ -12,6 +12,12 @@ jobs:
   code_quality:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Greating
+        run: echo $WELCOME_PHRASE
       - name: Installing dependencies
         run: npm install
       - name: npm lint
