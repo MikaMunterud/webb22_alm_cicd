@@ -1,15 +1,16 @@
 const express = require('express');
 
 const router = express.Router();
+
 const users = [
-  { username: 'MM', FirstName: 'Mika', Surname: 'Munterud' },
-  { username: 'AW', FirstName: 'Alexander', Surname: 'Wiklöv' },
-  { username: 'LH', FirstName: 'Linus', Surname: 'Härén' },
+  { username: 'MM', firstName: 'Mika', surname: 'Munterud' },
+  { username: 'AW', firstName: 'Alexander', surname: 'Wiklöv' },
+  { username: 'LH', firstName: 'Linus', surname: 'Härén' },
 ];
 
 /* GET users listing. */
 router.get('/', (req, res) => {
-  res.send(users);
+  res.render('users', { users });
 });
 
 module.exports = router;
