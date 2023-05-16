@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>User List</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
-  <body>
-    <h1>Group 4</h1>
+<%- include('header.ejs') -%>
 
-    <% users.forEach(function(user) { %>
-    <h2>
-      <strong> <%= user.username %> – </strong>
-      <em><%= user.firstName %> <%= user.surname %></em>
-      <% }); %>
-    </p>
-  </body>
-</html>
+  <h1>Group 4</h1>
+
+  <% users.forEach(function(user) { %>
+  <h2>
+    <strong> <%= user.username %> – </strong>
+    <em><%= user.firstName %> <%= user.surname %></em>
+    <% }); %>
+  </p>
+
+<%- include('footer.ejs') -%>
