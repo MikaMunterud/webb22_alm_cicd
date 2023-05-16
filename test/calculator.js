@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 const assert = require('assert');
-const { Calculator } = require('../calculator');
+const { Calculator } = require('../public/javascripts/calculator');
 
 describe('Calculator', function () {
   let calc;
