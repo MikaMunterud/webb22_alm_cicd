@@ -1,0 +1,13 @@
+name: Fake deploy from branch
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  echo_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Second step
+        run: 'echo Now deploying branch: $GITHUB_REF_NAME  to the test server'
