@@ -20,7 +20,9 @@ jobs:
         run: echo $WELCOME_PHRASE
       - name: Installing dependencies
         run: npm install
-      - name: npm lint
+      - name: Running lining check
         run: npm run lint
       - name: Run project unit tests
         run: npm run test
+      - name: Run project integration tests
+        run: npm run test:integration
