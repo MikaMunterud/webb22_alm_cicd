@@ -1,0 +1,14 @@
+name: Fake production deploy to main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  echo_branch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: first step
+        run: 'echo Now deploying to production'
