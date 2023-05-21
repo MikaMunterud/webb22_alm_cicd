@@ -9,5 +9,5 @@ jobs:
   echo_branch:
     runs-on: ubuntu-latest
     steps:
-      - name: Second step
-        run: 'echo Now deploying branch: $GITHUB_REF_NAME  to the test server'
+      - name: Showing which branch is deploying to test server
+        run: 'echo Now deploying branch: $GITHUB_REF_NAME to the test server'
