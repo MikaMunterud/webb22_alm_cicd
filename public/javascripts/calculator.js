@@ -8,7 +8,7 @@ class Calculator {
 
   methods() {
     return Object.getOwnPropertyNames(Calculator.prototype).filter(
-      (method) => !this.hide.includes(method),
+      (method) => !this.hide.includes(method)
     );
   }
 
