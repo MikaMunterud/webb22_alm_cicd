@@ -1,12 +1,17 @@
 <%- include('header.ejs') -%>
 
-  <h1>Group 4</h1>
+<main>
+  <h1>TEAM ALM</h1>
+  <div>
+    <% users.forEach(function(user) { %>
+    <p>
+      <strong> <%= user.username %> – </strong>
+      <em><%= user.firstName %> <%= user.surname %></em>
+      <% }); %>
+    </p>
+  </div>
 
-  <% users.forEach(function(user) { %>
-  <h2>
-    <strong> <%= user.username %> – </strong>
-    <em><%= user.firstName %> <%= user.surname %></em>
-    <% }); %>
-  </p>
+  <img src="/images/original.png" alt="Group mascot" width="600" />
+</main>
 
 <%- include('footer.ejs') -%>
