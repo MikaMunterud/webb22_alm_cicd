@@ -2,7 +2,7 @@ env:
   commonjs: true
   es2021: true
   node: true
-extends: airbnb-base
+extends: [airbnb-base, prettier, plugin:prettier/recommended]
 overrides:
   - files:
       - test/**/*.js
@@ -11,4 +11,6 @@ overrides:
       prefer-arrow-callback: off
 parserOptions:
   ecmaVersion: latest
-rules: { 'no-unused-vars': ['error', { argsIgnorePattern: 'next' }] }
+rules:
+  'no-unused-vars': ['error', { argsIgnorePattern: 'next' }]
+  'prettier/prettier': 'error'
