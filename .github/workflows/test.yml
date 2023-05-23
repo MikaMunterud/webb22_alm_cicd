@@ -62,7 +62,7 @@ jobs:
           fail-on-error: true
 
       - name: Checking coverage on project unit tests
-        run: npm run nyc
+        run: npm run check-coverage
 
       - name: Smoke test with curl
         run: curl http://localhost:8080
