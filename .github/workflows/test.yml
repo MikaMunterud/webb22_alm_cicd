@@ -28,5 +28,9 @@ jobs:
         run: npm run lint
       - name: Run project unit tests
         run: npm run test
+      - name: Checking coverage on project unit tests
+        run: npm run nyc
       - name: Run project integration tests
         run: npm run test:integration
+      - name: Run project selenium tests
+        run: npm run wdio
