@@ -5,7 +5,6 @@ env:
   SECRET: ${{ secrets.SECRET }}
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  SHA: ${{ github.sha }}
 
 on:
   workflow_run:
@@ -35,6 +34,6 @@ jobs:
         run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-7`" >> $GITHUB_ENV
 
       - name: docker image
-        run: 'echo ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:sha-${{env.SHA}}'
+        run: 'echo ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:sha-${GITHUB_SHA}'
       - name: Show secret env
         run: 'echo ${{env.SECRET}}'
