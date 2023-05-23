@@ -28,6 +28,10 @@ jobs:
           # Opens tcp port 8080 on the host and service container
           - 8080:80
 
+    permissions:
+      contents: read
+      checks: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -44,8 +48,19 @@ jobs:
 
       - name: Running linting check
         run: npm run lint
+
       - name: Run project unit tests
         run: npm run test
+
+      - name: Report
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Mocha Tests
+          path: /test-result/unit-test-report.json
+          reporter: mocha-json
+          fail-on-error: true
+
       - name: Checking coverage on project unit tests
         run: npm run nyc
 
