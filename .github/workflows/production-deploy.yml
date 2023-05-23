@@ -5,6 +5,7 @@ env:
   SECRET: ${{secrets.SECRET}}
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+  SHA: ${{ github.sha }}
 
 on:
   workflow_run:
@@ -12,14 +13,22 @@ on:
     types:
       - completed
 
+  push:
+    branches-ignore:
+      - main
+
 jobs:
   echo_branch:
     runs-on: ubuntu-latest
 
     steps:
-      - name: first message
+      - name: Showing deployment message
         run: 'echo Now deploying to ${{env.NODE_ENV}}'
+
+      - name: Add SHORT_SHA env property with commit short sha
+        run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
+
       - name: docker image
-        run: 'echo ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:sha-$GITBHUB_SHA::7'
+        run: 'echo ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:sha-${SHORT_SHA}'
       - name: Show secret env
         run: 'echo ${{env.SECRET}}'
