@@ -9,7 +9,8 @@
     "prepare": "husky install",
     "test": "mocha test/unit --reporter json > test-results/unit-test-report.json",
     "test:integration": "mocha test/integration",
-    "nyc": "nyc npm run test"
+    "nyc": "nyc npm run test",
+    "check-coverage": "nyc --check-coverage=true npm run test"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
