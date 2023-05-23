@@ -8,7 +8,9 @@ env:
 
 on:
   workflow_run:
-    workflows: ['Test']
+    workflows:
+      - Test
+      - Create and publish a Docker image
     types:
       - completed
 
@@ -17,15 +19,24 @@ on:
       - main
 
 jobs:
-  on-failure:
+  check-workflows:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
-    steps:
-      - run: echo 'The triggering workflow failed'
 
-  echo_branch:
+    steps:
+      - name: Check workflow status
+        id: check
+        run: |
+          if [[ "${{ github.event.workflow_run.conclusion }}" == "success" ]]; then
+            echo ::set-output name=completed::success
+          else
+            echo ::set-output name=completed::failure
+          fi
+
+  dependent-job-success:
+    needs: check-workflows
+    if: ${{ needs.check-workflows.outputs.completed == 'success' }}
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
     steps:
       - name: Showing deployment message
         run: 'echo Now deploying to ${{env.NODE_ENV}}'
@@ -37,3 +48,12 @@ jobs:
         run: 'echo ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:sha-${GITHUB_SHA}'
       - name: Show secret env
         run: 'echo ${{env.SECRET}}'
+
+  dependent-job-failure:
+    needs: check-workflows
+    if: ${{ needs.check-workflows.outputs.completed == 'failure' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print failure message
+        run: echo "One or both workflows failed."
