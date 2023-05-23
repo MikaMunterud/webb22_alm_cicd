@@ -19,6 +19,6 @@ jobs:
       - name: first message
         run: 'echo Now deploying to ${{env.NODE_ENV}}'
       - name: docker image
-        run: 'echo ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${GITBHUB_SHA::7}'
+        run: 'echo ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:sha-$GITBHUB_SHA::7'
       - name: Show secret env
         run: 'echo ${{env.SECRET}}'
