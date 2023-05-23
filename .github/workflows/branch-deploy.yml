@@ -1,5 +1,8 @@
 name: Fake deploy from branch
 
+env:
+  NODE_ENV: development
+
 on:
   push:
     branches-ignore:
@@ -9,5 +12,5 @@ jobs:
   echo_branch:
     runs-on: ubuntu-latest
     steps:
-      - name: Showing which branch is deploying to test server
-        run: 'echo Now deploying branch: $GITHUB_REF_NAME to the test server'
+      - name: Showing which branch is deployed during development
+        run: 'echo Now deploying branch: $GITHUB_REF_NAME in ${{env.NODE_ENV}}'

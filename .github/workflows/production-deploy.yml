@@ -1,4 +1,10 @@
-name: Fake production deploy to main
+name: Fake Production Deploy to main
+
+env:
+  NODE_ENV: production
+  SECRET: ${{secrets.SECRET}}
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
 
 on:
   push:
@@ -10,5 +16,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: first step
-        run: 'echo Now deploying to production'
+      - name: first message
+        run: 'echo Now deploying to ${{env.NODE_ENV}}'
+      - name: docker image
+        run: 'echo ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${GITBHUB_SHA::7}'
+      - name: Show secret env
+        run: 'echo ${{env.SECRET}}'
