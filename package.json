@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "prepare": "husky install",
     "test": "mocha test/unit --reporter json > test-results/unit-test-report.json",
-    "test:integration": "mocha test/integration --reporter json > test-results/integration-test-report.json"
+    "test:integration": "mocha test/integration --reporter json > test-results/integration-test-report.json",
+    "coverage": "nyc --reporter=html  npm run test"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -26,6 +27,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.0",
     "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
     "prettier": "2.8.8",
     "supertest": "^6.3.3"
   }
