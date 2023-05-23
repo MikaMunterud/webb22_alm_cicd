@@ -30,7 +30,7 @@ jobs:
       - name: Showing deployment message
         run: 'echo Now deploying to ${{env.NODE_ENV}}'
 
-      - name: Add SHORT_SHA env property with commit short sha
+      - name: Add SHORT_SHA env property
         run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-7`" >> $GITHUB_ENV
 
       - name: docker image
