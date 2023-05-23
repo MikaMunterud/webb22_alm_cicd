@@ -12,5 +12,5 @@ jobs:
   echo_branch:
     runs-on: ubuntu-latest
     steps:
-      - name: Showing which branch is deploying during development
+      - name: Showing which branch is deployed during development
         run: 'echo Now deploying branch: $GITHUB_REF_NAME in ${{env.NODE_ENV}}'
