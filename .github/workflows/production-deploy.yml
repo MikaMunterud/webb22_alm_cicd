@@ -9,7 +9,7 @@ env:
 
 on:
   workflow_run:
-    workflows: ['Test', 'Create and publish a Docker image'] # runs after code_quality workflow
+    workflows: ['Test']
     types:
       - completed
 
@@ -35,6 +35,6 @@ jobs:
         run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-7`" >> $GITHUB_ENV
 
       - name: docker image
-        run: 'echo ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:sha-${SHORT_SHA}'
+        run: 'echo ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:sha-${{env.SHA}}'
       - name: Show secret env
         run: 'echo ${{env.SECRET}}'
