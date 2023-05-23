@@ -27,7 +27,7 @@ jobs:
         id: check
         run: |
           if [[ "${{ github.event.workflow_run.conclusion }}" == "success" ]]; then
-            echo '{completed}={completed}' >> $GITHUB_OUTPUT
+            echo '{completed}={success}' >> $GITHUB_OUTPUT
           else
             echo '{completed}={failure}' >> $GITHUB_OUTPUT
           fi
