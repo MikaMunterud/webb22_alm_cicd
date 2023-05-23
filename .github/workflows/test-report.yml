@@ -1,4 +1,5 @@
 name: 'Test Report'
+
 on:
   workflow_run:
     workflows: ['CI'] # runs after CI workflow
@@ -65,8 +66,8 @@ jobs:
           fail-on-error: 'true'
 
           # Relative path under $GITHUB_WORKSPACE where the repository was checked out.
-          working-directory: ''
+          working-directory: '$GITHUB_WORKSPACE'
 
           # Personal access token used to interact with Github API
           # Default: ${{ github.token }}
-          token: ''
+          token: '${{ github.token }}'
