@@ -57,7 +57,7 @@ jobs:
         if: always()
         with:
           name: Mocha Tests
-          path: /test-result/unit-test-report.json
+          path: test-result/unit-test-report.json
           reporter: mocha-json
           fail-on-error: true
 
