@@ -14,21 +14,43 @@ env:
 
 jobs:
   code_quality:
-    runs-on: ubuntu-latest
+    runs-on:
+      ubuntu-latest
+
+      # Service containers to run with `runner-job`
+    services:
+      # Label used to access the service container
+      nginx:
+        # Docker Hub image
+        image: nginx:alpine
+        #
+        ports:
+          # Opens tcp port 8080 on the host and service container
+          - 8080:80
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Greating
         run: echo $WELCOME_PHRASE
+
       - name: Installing dependencies
         run: npm install
-      - name: Running lining check
+
+      - name: Running linting check
         run: npm run lint
       - name: Run project unit tests
         run: npm run test
       - name: Checking coverage on project unit tests
         run: npm run nyc
+
+      - name: Smoke test with curl
+        run: curl http://localhost:8080
+
       - name: Run project integration tests
         run: npm run test:integration
