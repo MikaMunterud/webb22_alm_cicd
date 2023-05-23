@@ -14,6 +14,3 @@ parserOptions:
 rules:
   'no-unused-vars': ['error', { argsIgnorePattern: 'next' }]
   'prettier/prettier': 'error'
-globals:
-  expect: true
-  browser: true
