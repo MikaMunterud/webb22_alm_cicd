@@ -1,0 +1,270 @@
+{
+  "stats": {
+    "suites": 15,
+    "tests": 14,
+    "passes": 14,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-23T09:49:54.684Z",
+    "end": "2023-05-23T09:49:54.693Z",
+    "duration": 9
+  },
+  "tests": [
+    {
+      "title": "should return 0 when the calculator is created",
+      "fullTitle": "Calculator getResult() should return 0 when the calculator is created",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 0 when calculator is reset",
+      "fullTitle": "Calculator clearAll() should return 0 when calculator is reset",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return value before clearAll() function",
+      "fullTitle": "Calculator undo clearAll() should return value before clearAll() function",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 28 when undoing the latest function",
+      "fullTitle": "Calculator clear() should return 28 when undoing the latest function",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 28 when undoing the latest function",
+      "fullTitle": "Calculator undo clear() should return 28 when undoing the latest function",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 28 when undoing the clearAll() function",
+      "fullTitle": "Calculator undo() should return 28 when undoing the clearAll() function",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return sum of 4 * 4",
+      "fullTitle": "Calculator Multiply should return sum of 4 * 4",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return sum of 4 * 4 and undo the second multiplication of 4",
+      "fullTitle": "Calculator undo Multiply should return sum of 4 * 4 and undo the second multiplication of 4",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return sum of 10 - 2",
+      "fullTitle": "Calculator Subtract should return sum of 10 - 2",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return sum of 10 - 2 and undo the second subtract of 4",
+      "fullTitle": "Calculator undo Subtract should return sum of 10 - 2 and undo the second subtract of 4",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return sum of 10 / 2",
+      "fullTitle": "Calculator Divide should return sum of 10 / 2",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return sum of 20 / 2 and undo the second divide of 2",
+      "fullTitle": "Calculator undo Divide should return sum of 20 / 2 and undo the second divide of 2",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return sum of 2 + 3",
+      "fullTitle": "Calculator Add should return sum of 2 + 3",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 20 and undo the second addition of number 3",
+      "fullTitle": "Calculator undo Add should return 20 and undo the second addition of number 3",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "should return 0 when the calculator is created",
+      "fullTitle": "Calculator getResult() should return 0 when the calculator is created",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 0 when calculator is reset",
+      "fullTitle": "Calculator clearAll() should return 0 when calculator is reset",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return value before clearAll() function",
+      "fullTitle": "Calculator undo clearAll() should return value before clearAll() function",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 28 when undoing the latest function",
+      "fullTitle": "Calculator clear() should return 28 when undoing the latest function",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 28 when undoing the latest function",
+      "fullTitle": "Calculator undo clear() should return 28 when undoing the latest function",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 28 when undoing the clearAll() function",
+      "fullTitle": "Calculator undo() should return 28 when undoing the clearAll() function",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return sum of 4 * 4",
+      "fullTitle": "Calculator Multiply should return sum of 4 * 4",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return sum of 4 * 4 and undo the second multiplication of 4",
+      "fullTitle": "Calculator undo Multiply should return sum of 4 * 4 and undo the second multiplication of 4",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return sum of 10 - 2",
+      "fullTitle": "Calculator Subtract should return sum of 10 - 2",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return sum of 10 - 2 and undo the second subtract of 4",
+      "fullTitle": "Calculator undo Subtract should return sum of 10 - 2 and undo the second subtract of 4",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return sum of 10 / 2",
+      "fullTitle": "Calculator Divide should return sum of 10 / 2",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return sum of 20 / 2 and undo the second divide of 2",
+      "fullTitle": "Calculator undo Divide should return sum of 20 / 2 and undo the second divide of 2",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return sum of 2 + 3",
+      "fullTitle": "Calculator Add should return sum of 2 + 3",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 20 and undo the second addition of number 3",
+      "fullTitle": "Calculator undo Add should return 20 and undo the second addition of number 3",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/unit/calculator.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ]
+}

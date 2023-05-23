@@ -1,0 +1,36 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-23T09:49:55.733Z",
+    "end": "2023-05-23T09:49:55.772Z",
+    "duration": 39
+  },
+  "tests": [
+    {
+      "title": "should return 0 when the calculator is created",
+      "fullTitle": "Calculator getResult() should return 0 when the calculator is created",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/integration/calculator.js",
+      "duration": 11,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "should return 0 when the calculator is created",
+      "fullTitle": "Calculator getResult() should return 0 when the calculator is created",
+      "file": "/Users/mikamunterud/Documents/Nackademin/Application Lifecycle Management/Application Lifecycle Management VS Code/webb22_alm_cicd/test/integration/calculator.js",
+      "duration": 11,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ]
+}
