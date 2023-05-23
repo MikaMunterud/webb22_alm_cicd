@@ -11,7 +11,7 @@ name: Create and publish a Docker image
 
 on:
   workflow_run:
-    workflows: ['code_quality'] # runs after code_quality workflow
+    workflows: ['Test'] # runs after Test workflow
     types:
       - completed
 
