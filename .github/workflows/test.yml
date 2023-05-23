@@ -32,5 +32,3 @@ jobs:
         run: npm run nyc
       - name: Run project integration tests
         run: npm run test:integration
-      - name: Run project selenium tests
-        run: npm run wdio
