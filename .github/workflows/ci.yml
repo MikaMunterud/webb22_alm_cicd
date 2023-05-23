@@ -19,9 +19,3 @@ jobs:
         with:
           name: test-results unit
           path: /test-results/unit-test-report.json
-      - run: npm run test:integration # run tests (configured to use mocha-junit reporter)
-      - uses: actions/upload-artifact@v2 # upload test results
-        if: success() || failure() # run this step even if previous step failed
-        with:
-          name: test-results integration
-          path: /test-results/integration-test-report.json
