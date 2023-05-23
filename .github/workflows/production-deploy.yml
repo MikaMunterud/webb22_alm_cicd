@@ -34,7 +34,7 @@ jobs:
 
   dependent-job-success:
     needs: check-workflows
-    if: ${{ needs.check.outputs.completed == 'success' }}
+    if: ${{ needs.check-check-workflows.outputs.completed == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -51,7 +51,7 @@ jobs:
 
   dependent-job-failure:
     needs: check-workflows
-    if: ${{ needs.check.outputs.completed == 'failure' }}
+    if: ${{ needs.check-workflows.outputs.completed == 'failure' }}
     runs-on: ubuntu-latest
 
     steps:
