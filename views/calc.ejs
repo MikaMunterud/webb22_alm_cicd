@@ -1,10 +1,10 @@
-<%- include('header.ejs') -%>
+<%- include('header.ejs') -%> <%- include('navbar.ejs') -%>
 
 <main>
   <h1>Calculator</h1>
   <h2>Result: <%= result %></h2>
 
-  <div>
+  <div class="calculator">
     <form action="/calc/add" method="POST" onsubmit="submitForm(event)">
       <input type="number" name="value" required />
       <button type="submit">Add</button>
@@ -25,17 +25,19 @@
       <button type="submit">Divide</button>
     </form>
 
-    <form action="/calc/clear" method="POST" onsubmit="submitForm(event)">
-      <button type="submit">Clear</button>
-    </form>
+    <div class="calc-btns">
+      <form action="/calc/clear" method="POST" onsubmit="submitForm(event)">
+        <button type="submit">Clear</button>
+      </form>
 
-    <form action="/calc/clearAll" method="POST" onsubmit="submitForm(event)">
-      <button type="submit">Clear All</button>
-    </form>
+      <form action="/calc/clearAll" method="POST" onsubmit="submitForm(event)">
+        <button type="submit">Clear All</button>
+      </form>
 
-    <form action="/calc/undo" method="POST" onsubmit="submitForm(event)">
-      <button type="submit">Undo</button>
-    </form>
+      <form action="/calc/undo" method="POST" onsubmit="submitForm(event)">
+        <button type="submit">Undo</button>
+      </form>
+    </div>
   </div>
 
   <img src="/images/original.png" alt="Group mascot" width="600" />
