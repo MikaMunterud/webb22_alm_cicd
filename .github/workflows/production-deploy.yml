@@ -14,7 +14,7 @@ on:
       - completed
 
   push:
-    branches-ignore:
+    branches:
       - main
 
 jobs:
