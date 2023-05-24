@@ -10,12 +10,14 @@
 name: Create and publish a Docker image
 
 on:
+  push:
+    branches:
+      - main
+
   workflow_run:
     workflows: ['Test'] # runs after Test workflow
     types:
       - completed
-
-  push:
     branches:
       - main
 
