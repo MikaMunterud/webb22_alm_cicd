@@ -52,7 +52,7 @@ jobs:
       - name: Run project unit tests
         run: npm run test
 
-      - name: Report
+      - name: Creating Test Report
         uses: dorny/test-reporter@v1
         if: always()
         with:
