@@ -2,7 +2,7 @@ name: Fake Production Deploy to main
 
 env:
   NODE_ENV: production
-  SECRET: ${{ secrets.SECRET }}
+  SECRET: ${{secrets.SECRET}}
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
